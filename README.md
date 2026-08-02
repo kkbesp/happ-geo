@@ -9,7 +9,10 @@
 | файл | размер | теги |
 |---|---|---|
 | `geoip.dat` | 388 КБ | `ru`, `private` |
-| `geosite.dat` | 3.8 МБ | `private`, `ru-available-only-inside`, `category-ads-all` |
+
+Рекламу режет не маршрутизация, а DNS (AdGuard в удалённом резолвере): тег
+`category-ads-all` — это 156686 доменов, в памяти Xray они не влезают в лимит iOS.
+| `geosite.dat` | 6 КБ | `private`, `ru-available-only-inside` |
 
 ## Ссылки для Happ
 
@@ -32,7 +35,7 @@ geositeUrl: https://raw.githubusercontent.com/kkbesp/happ-geo/main/geosite.dat
 
 <!-- link -->
 ```
-happ://routing/onadd/eyJOYW1lIjoia2tiZXNwIHJ1LWRpcmVjdCIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vZG5zLnF1YWQ5Lm5ldC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjkuOS45LjkiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vZG5zMTEucXVhZDkubmV0L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI5LjkuOS4xMSIsIkdlb2lwdXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2trYmVzcC9oYXBwLWdlby9tYWluL2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va2tiZXNwL2hhcHAtZ2VvL21haW4vZ2Vvc2l0ZS5kYXQiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOnJ1LWF2YWlsYWJsZS1vbmx5LWluc2lkZSIsImRvbWFpbjpzZWxlY3RlbC5ydSJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiZ2VvaXA6cnUiXSwiQmxvY2tTaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcy1hbGwiXSwiTGFzdFVwZGF0ZWQiOjE3ODU2OTE5OTB9
+happ://routing/onadd/eyJOYW1lIjoia2tiZXNwIHJ1LWRpcmVjdCIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vZG5zLmFkZ3VhcmQtZG5zLmNvbS9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6Ijk0LjE0MC4xNC4xNCIsIkRvbWVzdGljRE5TVHlwZSI6IkRvSCIsIkRvbWVzdGljRE5TRG9tYWluIjoiaHR0cHM6Ly9kbnMxMS5xdWFkOS5uZXQvZG5zLXF1ZXJ5IiwiRG9tZXN0aWNETlNJUCI6IjkuOS45LjExIiwiR2VvaXB1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va2tiZXNwL2hhcHAtZ2VvL21haW4vZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ra2Jlc3AvaGFwcC1nZW8vbWFpbi9nZW9zaXRlLmRhdCIsIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSIsImdlb3NpdGU6cnUtYXZhaWxhYmxlLW9ubHktaW5zaWRlIiwiZG9tYWluOnNlbGVjdGVsLnJ1Il0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCJnZW9pcDpydSJdLCJMYXN0VXBkYXRlZCI6MTc4NTY5MzY5Mn0
 ```
 <!-- /link -->
 

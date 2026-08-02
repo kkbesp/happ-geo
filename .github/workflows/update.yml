@@ -20,7 +20,7 @@ jobs:
           curl -sfL -o geoip-src.dat  $SRC/geoip.dat
           curl -sfL -o geosite-src.dat $SRC/geosite.dat
           python3 cut.py geoip-src.dat  geoip.dat  ru private
-          python3 cut.py geosite-src.dat geosite.dat private ru-available-only-inside category-ads-all
+          python3 cut.py geosite-src.dat geosite.dat private ru-available-only-inside
           rm -f geoip-src.dat geosite-src.dat
 
       - name: commit
