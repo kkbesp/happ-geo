@@ -20,6 +20,16 @@ LINK="happ://routing/onadd/$B64"
 printf '%s\n' "$LINK" > link.txt
 echo "длина ссылки: $(printf %s "$LINK" | wc -c | tr -d ' ') байт"
 
+# вписываем ссылку в README между маркерами, чтобы она не устаревала
+python3 - "$LINK" <<'PY'
+import re, sys
+link = sys.argv[1]
+r = open('README.md').read()
+r = re.sub(r'(<!-- link -->\n).*?(\n<!-- /link -->)',
+           lambda m: m.group(1) + '```\n' + link + '\n```' + m.group(2), r, flags=re.S)
+open('README.md', 'w').write(r)
+PY
+
 if command -v qrencode >/dev/null; then
   qrencode -o routing-qr.png -s 8 -m 2 "$LINK"
   qrencode -t ANSIUTF8 -o - "$LINK"

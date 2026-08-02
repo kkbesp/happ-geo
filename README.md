@@ -28,11 +28,15 @@ geositeUrl: https://raw.githubusercontent.com/kkbesp/happ-geo/main/geosite.dat
 
 <img src="routing-qr.png" width="320" alt="happ://routing/onadd — профиль маршрутизации">
 
-Ссылка текстом (для macOS, где сканировать нечем) — в `link.txt`, удобнее так:
+Ссылка текстом — для macOS, где сканировать нечем. Скопировать и вставить в Happ:
 
-```sh
-cat link.txt | pbcopy
+<!-- link -->
 ```
+happ://routing/onadd/eyJOYW1lIjoia2tiZXNwIHJ1LWRpcmVjdCIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vZG5zLnF1YWQ5Lm5ldC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjkuOS45LjkiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vZG5zMTEucXVhZDkubmV0L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI5LjkuOS4xMSIsIkdlb2lwdXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2trYmVzcC9oYXBwLWdlby9tYWluL2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va2tiZXNwL2hhcHAtZ2VvL21haW4vZ2Vvc2l0ZS5kYXQiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOnJ1LWF2YWlsYWJsZS1vbmx5LWluc2lkZSIsImRvbWFpbjpzZWxlY3RlbC5ydSJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiZ2VvaXA6cnUiXSwiQmxvY2tTaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcy1hbGwiXSwiTGFzdFVwZGF0ZWQiOjE3ODU2OTE5OTB9
+```
+<!-- /link -->
+
+Или из терминала: `cat ~/happ-geo/link.txt | pbcopy`
 
 Поменял правила в `routing.json` — перезапусти `make-link.sh` и отсканируй новый QR.
 Скрипт каждый раз подставляет свежий `LastUpdated`, иначе Happ не перекачает geo-базы.
