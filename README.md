@@ -24,7 +24,15 @@ geositeUrl: https://raw.githubusercontent.com/kkbesp/happ-geo/main/geosite.dat
 `happ://routing/onadd/<base64>` (кладёт в `link.txt`) и печатает QR прямо в терминал.
 Действие `onadd` означает, что профиль активируется сразу при добавлении.
 
-QR-картинка для сканирования с телефона — `routing-qr.png`.
+Сканировать с телефона:
+
+<img src="routing-qr.png" width="320" alt="happ://routing/onadd — профиль маршрутизации">
+
+Ссылка текстом (для macOS, где сканировать нечем) — в `link.txt`, удобнее так:
+
+```sh
+cat link.txt | pbcopy
+```
 
 Поменял правила в `routing.json` — перезапусти `make-link.sh` и отсканируй новый QR.
 Скрипт каждый раз подставляет свежий `LastUpdated`, иначе Happ не перекачает geo-базы.
