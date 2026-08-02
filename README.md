@@ -18,6 +18,17 @@ geoipUrl:   https://raw.githubusercontent.com/kkbesp/happ-geo/main/geoip.dat
 geositeUrl: https://raw.githubusercontent.com/kkbesp/happ-geo/main/geosite.dat
 ```
 
+## Импорт профиля в Happ
+
+`routing.json` — сам профиль маршрутизации. `./make-link.sh` собирает из него ссылку
+`happ://routing/onadd/<base64>` (кладёт в `link.txt`) и печатает QR прямо в терминал.
+Действие `onadd` означает, что профиль активируется сразу при добавлении.
+
+QR-картинка для сканирования с телефона — `routing-qr.png`.
+
+Поменял правила в `routing.json` — перезапусти `make-link.sh` и отсканируй новый QR.
+Скрипт каждый раз подставляет свежий `LastUpdated`, иначе Happ не перекачает geo-базы.
+
 ## Обновление
 
 `.github/workflows/update.yml` раз в сутки перекачивает исходные базы, режет и коммитит.
